@@ -27,12 +27,12 @@ class Address extends Model
 
     public function country(): HasOne
     {
-        return $this->hasOne(Country::class);
+        return $this->hasOne(Country::class, 'id', 'country_name');
     }
 
     public function city(): HasOne
     {
-        return $this->hasOne(City::class);
+        return $this->hasOne(City::class, 'id', 'city_name');
     }
 
 }

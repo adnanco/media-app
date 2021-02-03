@@ -10815,3 +10815,22 @@ body {
 .table .btn-link .feather {
   color: #b5b5c3;
 }
+
+.card-address {
+  background: rgba(0, 0, 0, 0.03);
+  border: 0;
+  min-height: 150px;
+}
+.card-address .card-body {
+  padding: 0.5rem;
+}
+.card-address .card-body .card-text {
+  padding: 0.5rem 0;
+}
+.card-address .card-body .card-text b {
+  display: block;
+  font-weight: 500;
+}
+.card-address .card-footer {
+  border-top: 0;
+}

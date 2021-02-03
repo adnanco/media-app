@@ -65,6 +65,10 @@ class PersonController extends Controller
     {
         $person = $this->personService->getById($id);
 
+        if (empty($person)) {
+            return redirect()->route('person.index');
+        }
+
         return view('pages.person', ['person' => $person]);
     }
 

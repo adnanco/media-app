@@ -119,8 +119,7 @@ $('#btnDelete').on('click', function () {
       '_method': 'DELETE'
     },
     dataType: 'json'
-  }).done(function (_ref5) {
-    var data = _ref5.data;
+  }).done(function () {
     window.location.reload();
   });
 });

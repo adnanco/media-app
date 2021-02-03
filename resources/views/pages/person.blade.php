@@ -50,6 +50,7 @@
                 </div>
             </div>
             <div class="card-footer text-center">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-target="{{route('person.destroy',[$person->id])}}">Kişiyi Sil</button>
                 <button type="submit" class="btn btn-info text-light">Kaydet</button>
             </div>
         </form>
@@ -62,18 +63,39 @@
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-6 g-4">
                     @foreach($person->address as $address)
                     <div class="col">
-                        <div class="card">
+                        <div class="card card-address shadow-sm">
                             <div class="card-body">
                                 <span class="badge rounded-pill bg-warning">{{$address->name}}</span>
                                 <p class="card-text">
                                     {{$address->address}}
-                                    <br />
-                                    {{$address->post_code}} {{$address->city_name}} / {{$address->country_name}}
+                                    <b>{{$address->post_code}} {{$address->city->name ?? ''}} / {{$address->country->name ?? ''}}</b>
                                 </p>
+
+                            </div>
+                            <div class="card-footer">
+                                <button type="button"
+                                        class="badge btn btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#addressModal"
+                                        data-target="{{route('person.address.show',[$person->id,$address->id])}}">Adresi Düzenle</button>
                             </div>
                         </div>
                     </div>
                     @endforeach
+
+                        <div class="col">
+                            <div class="card card-address shadow-sm">
+                                <div class="card-body">
+                                    <span class="badge rounded-pill bg-info">Adres Ekle</span>
+                                    <p class="card-text text-center py-3">
+                                        Kişiye ait adres bilgisi eklemek için butona tıklayınız
+                                        <button type="button" class="badge btn btn-link d-block mx-auto my-2"
+                                                data-bs-toggle="modal" data-bs-target="#addressModal"
+                                                data-target="{{route('person.address.index',$person->id)}}"><span data-feather="plus-circle" style="width:48px;height:48px;"></span>
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             @else
                 <div class="alert alert-warning fs-6 text-center" role="alert">
@@ -85,6 +107,7 @@
 
     @if(isset($person->id))
         @include('sections.modal.address')
+        @include('sections.modal.delete')
     @endif
 @endsection
 
