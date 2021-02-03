@@ -1,0 +1,101 @@
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    padding-top: $nav-canvas-height;
+    font-size: 13px;
+}
+
+.feather {
+    color: $nav-link-color;
+    width: $nav-icon-width;
+    height: $nav-icon-height;
+    margin-top: -2px;
+    margin-right: .75rem;
+}
+
+.offcanvas-collapse {
+    position: fixed;
+    top: $nav-canvas-height; /* Height of navbar */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $white;
+    z-index: 1;
+}
+
+@media (max-width: 767.98px) {
+    .offcanvas-collapse {
+        left: 100%;
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        overflow-y: auto;
+        visibility: hidden;
+
+        padding-top: $dropdown-padding-x;
+        transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+
+        &.open {
+            visibility: visible;
+            transform: translateX(-100%);
+        }
+    }
+}
+
+
+.sidebar {
+    .nav {
+        .nav-item {
+            margin-bottom: .5rem;
+
+            .nav-link {
+                border-radius: .5rem;
+
+                &.active, &:hover {
+                    .feather {
+                        color: $dropdown-link-hover-color;
+                    }
+
+                    background: $dropdown-link-hover-bg;
+                    color: $dropdown-link-hover-color;
+                }
+            }
+
+            .dropdown-menu {
+                position: static !important;
+
+                .dropdown-item {
+                    border-radius: .5rem;
+
+                    &.active, &:hover {
+                        .feather {
+                            color: $dropdown-link-hover-color;
+                        }
+
+                        background: $dropdown-link-hover-bg;
+                        color: $dropdown-link-hover-color;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+.table {
+    thead {
+        text-align: center;
+        color: #b5b5c3;
+    }
+
+    .btn-link {
+        padding: 0;
+
+        .feather {
+            color: #b5b5c3;
+        }
+    }
+}
