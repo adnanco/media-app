@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Address extends Model
 {
@@ -25,8 +25,14 @@ class Address extends Model
 
     public $timestamps = false;
 
-    public function persons(): BelongsTo
+    public function country(): HasOne
     {
-        return $this->belongsTo(Person::class);
+        return $this->hasOne(Country::class);
     }
+
+    public function city(): HasOne
+    {
+        return $this->hasOne(City::class);
+    }
+
 }

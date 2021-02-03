@@ -58,6 +58,7 @@ class AddressRepository implements EloquentRepositoryInterface
 
     public function getById($id)
     {
+
         return $this->address->where('id', $id)->first();
     }
 }

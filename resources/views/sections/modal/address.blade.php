@@ -20,16 +20,12 @@
                     <div class="col-md-4">
                         <label for="inputCountry" class="form-label">Ülke</label>
                         <select id="inputCountry" name="countryname" class="form-select">
-                            <option selected>Choose...</option>
-                            <option value="90">Türkiye</option>
                         </select>
                     </div>
                     <div class="col-md-4">
                         <label for="inputCity" class="form-label">Şehir</label>
                         <select id="inputCity" name="cityname" class="form-select">
-                            <option selected>Choose...</option>
-                            <option value="34">İstanbul</option>
-                            <option value="35">İzmir</option>
+                            <option selected>Seçiniz...</option>
                         </select>
                     </div>
                     <div class="col-md-4">
@@ -39,6 +35,8 @@
                 </form>
             </div>
             <div class="modal-footer">
+                <button type="button" class="btn btn-danger d-none" data-bs-toggle="modal" data-bs-target="#deleteModal">Adresi Sil</button>
+
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
                 <button type="button" class="btn btn-primary" id="saveAddress">Kaydet</button>
             </div>

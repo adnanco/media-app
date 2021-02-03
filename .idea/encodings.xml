@@ -3,8 +3,27 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/.env" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/.idea/.gitignore" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/AddressController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/CountryCityController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/PersonController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Requests/CountryCityRequest.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Models/Address.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Models/City.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Models/Country.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Repositories/AddressRepository.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Repositories/CountryRepository.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Services/AddressService.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Services/CountryService.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Services/PersonService.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config/app.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" charset="windows-1254" />
+    <file url="file://$PROJECT_DIR$/database/factories/CityFactory.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/database/factories/CountryFactory.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/database/migrations/2021_02_01_071843_create_address_table.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/database/migrations/2021_02_03_150250_create_countries_table.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/database/migrations/2021_02_03_150401_create_cities_table.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/js/modal.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/sections/modal/delete.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/routes/web.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/webpack.mix.js" charset="UTF-8" />
   </component>

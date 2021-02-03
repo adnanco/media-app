@@ -17,7 +17,6 @@
                     </tr>
                     </thead>
                     <tbody>
-
                     @if (count($persons)> 0)
                         @foreach($persons as $person)
                             <tr>
@@ -42,8 +41,8 @@
                                 <td class="text-end">
                                     <a href="{{route('person.show',$person->id)}}" class="btn btn-link"><span
                                             data-feather="edit-3"></span></a>
-                                    <a href="{{route('person.show',$person->id)}}" class="btn btn-link"><span
-                                            data-feather="trash-2"></span></a>
+                                    <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#deleteModal" data-target="{{route('person.destroy',[$person->id])}}"><span
+                                            data-feather="trash-2"></span></button>
                                 </td>
                             </tr>
                         @endforeach
@@ -51,7 +50,6 @@
                         <tr>
                             <td colspan="5">
                                 Personel kaydı bulunmuyor, yeni kayıt eklemek için <a href="{{route('person.create')}}">tıklayın</a>
-                                .
                             </td>
                         </tr>
                     @endif
@@ -61,5 +59,6 @@
     </div>
 
     @include('sections.modal.address')
+    @include('sections.modal.delete')
 @endsection
 

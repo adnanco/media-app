@@ -19,8 +19,8 @@ class CreateAddressTable extends Migration
             $table->foreignId('person_id')->constrained('person', 'id')->onDelete('cascade')->onUpdate('cascade');
             $table->longText('address');
             $table->string('post_code', 20);
-            $table->string('city_name', 60);
-            $table->string('country_name', 60);
+            $table->smallInteger('city_name');
+            $table->smallInteger('country_name');
         });
     }
 

@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\Address;
+use App\Models\City;
+use App\Models\Country;
 use App\Models\Person;
 use Illuminate\Database\Seeder;
 
@@ -16,7 +18,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Person::factory()->count(10)->has(Address::factory()->count(4))->create();
-        //Person::factory(10)->create();
-        // Address::factory(50)->create();
+        Country::factory()->count(10)->has(City::factory()->count(10))->create();
     }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AddressController;
+use App\Http\Controllers\CountryCityController;
 use App\Http\Controllers\PersonController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,6 @@ Route::resources([
     'person' => PersonController::class,
     'person.address' => AddressController::class,
 ]);
+
+Route::get('/get-countries', [CountryCityController::class, 'getCountries']);
+Route::get('/get-country/{countryId}', [CountryCityController::class, 'getCountry']);

@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\AddressRequest;
 use App\Services\AddressService;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -68,12 +67,12 @@ class AddressController extends Controller
      * @param int $id
      * @return JsonResponse
      */
-    public function show(int $id): JsonResponse
+    public function show(int $personId, int $addressId): JsonResponse
     {
         $result = ['status' => 200];
 
         try {
-            $result['data'] = $this->addressService->getById($id);
+            $result['data'] = $this->addressService->getById($addressId);
         } catch (Exception $e) {
             $result = [
                 'status' => 500,
@@ -97,7 +96,6 @@ class AddressController extends Controller
 
         try {
             $result['data'] = $this->addressService->updateAddress($request, $id);
-
         } catch (Exception $e) {
             $result = [
                 'status' => 500,
@@ -114,12 +112,12 @@ class AddressController extends Controller
      * @param int $id
      * @return JsonResponse
      */
-    public function destroy(int $id): JsonResponse
+    public function destroy(int $personId, int $addressId): JsonResponse
     {
         $result = ['status' => 200];
 
         try {
-            $result['data'] = $this->addressService->Address($id);
+            $result['data'] = $this->addressService->deleteAddress($addressId);
         } catch (Exception $e) {
             $result = [
                 'status' => 500,

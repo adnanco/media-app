@@ -7,6 +7,7 @@
 /***/ (() => {
 
 var addressModal = $('#addressModal');
+var deleteModal = $('#deleteModal');
 addressModal.on('show.bs.modal', function (e) {
   var target, form;
   target = e.relatedTarget.getAttribute('data-target');
@@ -16,6 +17,7 @@ addressModal.on('show.bs.modal', function (e) {
       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     }
   });
+  getCountry();
   form.attr('action', target);
   $.ajax({
     type: 'GET',
@@ -29,6 +31,8 @@ addressModal.on('show.bs.modal', function (e) {
     }
 
     form.find('#inputType').val('PUT');
+    addressModal.find('.btn-danger').attr('data-target', target).removeClass('d-none');
+    getCity(data.country_name);
     $('#inputAddressName').val(data.name);
     $('#inputAddress').val(data.address);
     $('#inputCountry').val(data.country_name);
@@ -41,6 +45,9 @@ addressModal.on('hide.bs.modal', function (e) {
   addressModal.find('form').removeAttr('action');
   addressModal.find('#inputType').val('POST');
   addressModal.find('.alert').remove();
+});
+$('#inputCountry').on('change', function () {
+  getCity($(this).val());
 });
 $('#saveAddress').on('click', function () {
   var form;
@@ -66,6 +73,61 @@ $('#saveAddress').on('click', function () {
     });
     addressModal.find('.modal-body').prepend('<div class="alert alert-danger"><ul class="mb-0">' + err_row + '</ul></div>');
   });
+});
+
+function getCountry() {
+  $.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+  });
+  $.ajax({
+    type: 'GET',
+    url: '/get-countries',
+    dataType: 'json'
+  }).done(function (_ref3) {
+    var data = _ref3.data;
+    $.each(data, function (i, item) {
+      $('#inputCountry').append('<option value="' + item.id + '">' + item.name + '</option>');
+    });
+  });
+}
+
+function getCity(countryId) {
+  $.ajax({
+    type: 'GET',
+    url: '/get-country/' + countryId,
+    dataType: 'json'
+  }).done(function (_ref4) {
+    var data = _ref4.data;
+    $.each(data, function (i, item) {
+      $('#inputCity').append('<option value="' + item.id + '">' + item.name + '</option>');
+    });
+  });
+}
+
+$('#btnDelete').on('click', function () {
+  $.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+  });
+  $.ajax({
+    type: 'POST',
+    url: $(this).attr('data-target'),
+    data: {
+      '_method': 'DELETE'
+    },
+    dataType: 'json'
+  }).done(function (_ref5) {
+    var data = _ref5.data;
+    window.location.reload();
+  });
+});
+deleteModal.on('show.bs.modal', function (e) {
+  var target;
+  target = e.relatedTarget.getAttribute('data-target');
+  $('#btnDelete').attr('data-target', target);
 });
 
 /***/ })

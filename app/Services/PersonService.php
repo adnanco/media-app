@@ -50,6 +50,7 @@ class PersonService
     public function deletePerson($id)
     {
         Cache::forget('person:' . $id);
+        Cache::forget('person:list');
         return $this->personRepository->delete($id);
     }
 }
