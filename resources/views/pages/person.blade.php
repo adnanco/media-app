@@ -1,5 +1,8 @@
 @extends('layouts.master')
 
+@section('title', isset($person->name) ? $person->name . 'ait kişi bilgisi': 'Kişi bilgisi ekle')
+@section('description', isset($person->name) ? $person->name . 'ait kişisel bilgileri adresleri hakkında bilgi veriliyor.': 'Kişi bilgisi ekleme sayfası')
+
 @section('content')
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -50,7 +53,9 @@
                 </div>
             </div>
             <div class="card-footer text-center">
+                @if(isset($person->id))
                 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-target="{{route('person.destroy',[$person->id])}}">Kişiyi Sil</button>
+                @endif
                 <button type="submit" class="btn btn-info text-light">Kaydet</button>
             </div>
         </form>

@@ -1,4 +1,6 @@
 @extends('layouts.master')
+@section('title', 'Kişi listeleme')
+@section('description', 'Kişi listeleme sayfası burada listeleniyorlar')
 
 @section('content')
     <div class="card my-3 p-3 shadow-sm border-0">

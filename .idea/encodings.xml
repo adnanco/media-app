@@ -17,6 +17,8 @@
     <file url="file://$PROJECT_DIR$/app/Services/CountryService.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Services/PersonService.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config/app.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config/person.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config/seo.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/database/factories/CityFactory.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/database/factories/CountryFactory.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/database/migrations/2021_02_01_071843_create_address_table.php" charset="UTF-8" />
@@ -25,6 +27,7 @@
     <file url="file://$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/js/modal.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/sass/_styles.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/sections/modal/delete.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/routes/web.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/webpack.mix.js" charset="UTF-8" />
