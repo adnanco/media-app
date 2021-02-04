@@ -28,8 +28,11 @@
     <file url="file://$PROJECT_DIR$/resources/js/app.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/js/modal.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/sass/_styles.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/auth/login.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/auth/register.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/dashboard.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/index.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/layouts/guest.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/sections/header.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/sections/modal/delete.blade.php" charset="UTF-8" />

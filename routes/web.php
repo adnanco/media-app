@@ -20,13 +20,12 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::resources([
-    'person' => PersonController::class,
-    'person.address' => AddressController::class,
-]);
+Route::resource('person', PersonController::class)->middleware(['auth']);
+Route::resource('person.address', AddressController::class)->middleware(['auth']);
 
-Route::get('/get-countries', [CountryCityController::class, 'getCountries']);
-Route::get('/get-country/{countryId}', [CountryCityController::class, 'getCountry']);
+
+Route::get('/get-countries', [CountryCityController::class, 'getCountries'])->middleware(['auth']);
+Route::get('/get-country/{countryId}', [CountryCityController::class, 'getCountry'])->middleware(['auth']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

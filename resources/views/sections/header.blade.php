@@ -6,13 +6,20 @@
     </button>
 
 
+    <ul class="navbar-nav px-3" style="margin: 0 0 0 auto;">
     @auth
-        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
+        <li class="nav-item">
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" class="btn nav-link">Çıkış Yap</button>
+            </form>
+        </li>
     @else
-        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
+        <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Giriş Yap</a></li>
 
         @if (Route::has('register'))
-            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+            <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Kayıt Ol</a></li>
         @endif
     @endauth
+    </ul>
 </header>

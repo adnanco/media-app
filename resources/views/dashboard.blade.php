@@ -1,17 +1,13 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+@extends('layouts.master')
+@section('title', 'Kişi listeleme')
+@section('description', 'Kişi listeleme sayfası burada listeleniyorlar')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in!
-                </div>
-            </div>
+@section('content')
+    <div class="card my-3 p-3 shadow-sm border-0">
+        <h5 class="card-title border-bottom pb-2 mb-0">Dashboard</h5>
+        <div class="card-body">
+
         </div>
     </div>
-</x-app-layout>
+@endsection
+

@@ -1,24 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>@yield('title')</title>
+    <meta name="description" content="@yield('description')"/>
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+    @foreach(config('person.apple-touch-icon') as $sizes => $href)
+        <link rel="apple-touch-icon" href="{{$href}}" sizes="{{$sizes}}">
+    @endforeach
+    @foreach(config('person.icon') as $sizes => $href)
+        <link rel="icon" href="{{$href}}" type="image/png" sizes="{{$sizes}}">
+    @endforeach
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/ico" sizes="16x16">
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+    <meta property="og:site_name" content="{{config('app.name')}}"/>
+    <meta property="og:title" content="@yield('title')"/>
+    <meta property="og:description" content="@yield('description')"/>
+    <meta property="og:locale" content="{{ app()->getLocale()}}"/>
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
-    </head>
-    <body>
-        <div class="font-sans text-gray-900 antialiased">
-            {{ $slot }}
-        </div>
-    </body>
+    <link rel="stylesheet" href="{{asset('css')}}/app.css">
+</head>
+<body>
+@include('sections.header')
+<div class="container-fluid">
+    <main>
+        @yield('content')
+    </main>
+</div>
+@include('sections.footer')
+<script src="{{asset('js')}}/app.js"></script>
+</body>
 </html>
