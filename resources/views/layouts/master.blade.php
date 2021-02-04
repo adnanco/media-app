@@ -36,5 +36,7 @@
 </div>
 @include('sections.footer')
 <script src="{{asset('js')}}/app.js"></script>
+
+@yield('scripts')
 </body>
 </html>

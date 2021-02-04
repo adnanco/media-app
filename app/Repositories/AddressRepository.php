@@ -16,7 +16,7 @@ class AddressRepository implements EloquentRepositoryInterface
 
     public function getAll()
     {
-        return $this->address->getAll();
+        return $this->address->get();
     }
 
     public function create($data)
@@ -60,5 +60,11 @@ class AddressRepository implements EloquentRepositoryInterface
     {
 
         return $this->address->where('id', $id)->first();
+    }
+
+    public function getPerson($id)
+    {
+
+        return $this->address->where('person_id', $id)->get();
     }
 }

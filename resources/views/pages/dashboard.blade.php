@@ -22,3 +22,10 @@
 
 @endsection
 
+@section('scripts')
+    <script>
+        document.getElementById("copyButton").addEventListener("click", function () {
+            copyToClipboard(document.getElementById("copyTarget"));
+        });
+    </script>
+@endsection

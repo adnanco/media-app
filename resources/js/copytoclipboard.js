@@ -1,7 +1,3 @@
-document.getElementById("copyButton").addEventListener("click", function () {
-    copyToClipboard(document.getElementById("copyTarget"));
-});
-
 function copyToClipboard(elem) {
     // create hidden text element, if it doesn't already exist
     var targetId = "_hiddenCopyText_";

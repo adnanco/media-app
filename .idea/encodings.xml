@@ -4,9 +4,8 @@
     <file url="file://$PROJECT_DIR$/.env" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/.idea/.gitignore" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/AddressController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/Api/AddressController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/Api/AuthController.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/Http/Controllers/Api/AuthController.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/Http/Controllers/Api/PersonController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/Api/PersonController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/CountryCityController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/PersonController.php" charset="UTF-8" />
@@ -48,8 +47,6 @@
     <file url="file://$PROJECT_DIR$/resources/views/layouts/guest.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/pages/dashboard.blade.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/resources/views/pages/dashboard.blade.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/resources/views/pages/index.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/pages/index.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/sections/header.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/sections/modal/delete.blade.php" charset="UTF-8" />
