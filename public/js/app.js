@@ -6847,6 +6847,7 @@ var feather = __webpack_require__(/*! feather-icons */ "./node_modules/feather-i
 
 feather.replace();
 __webpack_require__.e(/*! import() */ "resources_js_modal_js").then(__webpack_require__.t.bind(__webpack_require__, /*! ./modal */ "./resources/js/modal.js", 23));
+__webpack_require__.e(/*! import() */ "resources_js_copytoclipboard_js").then(__webpack_require__.t.bind(__webpack_require__, /*! ./copytoclipboard */ "./resources/js/copytoclipboard.js", 23));
 
 /***/ }),
 
@@ -42639,7 +42640,7 @@ process.umask = function() { return 0; };
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_offcanvas_js":1,"resources_js_modal_js":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_offcanvas_js":1,"resources_js_modal_js":1,"resources_js_copytoclipboard_js":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
