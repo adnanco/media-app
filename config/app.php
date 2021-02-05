@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => 'https://medya-app.herokuapp.com/',
+    'url' => env('APP_URL', null),
 
     'asset_url' => env('ASSET_URL', null),
 
