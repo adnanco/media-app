@@ -42,6 +42,6 @@ Projeyi ayağa kaldırmak için terminal üzerinde ana dizinde aşağıda ki kom
 
 composer install
 
-./vendor/bin/sail up
+./vendor/bin/sail up docker sistemimiz için gerekli kurulumları tamamlıyor, bu işlem bittikten sonra tarayıcı üzerinde http://localhost yazdığımızda projemizin ayaklanması gerekiyor.
 
 
