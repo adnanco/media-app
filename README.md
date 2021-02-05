@@ -38,10 +38,10 @@ Projey'i geliştirmek için windows üzerinde Docker kurulumu yaptım. Eğer pc'
 
 [Docker Yükleme](https://www.docker.com/products/docker-desktop)
 
-Projeyi ayağa kaldırmak için terminal üzerinde ana dizinde aşağıda ki komutların çalıştırılması yeterli olacaktır
+Projeyi ayağa kaldırmak için terminal üzerinde ana dizinde aşağıda ki komutların çalıştırılması yeterli olacaktır.
 
 composer install
 
-./vendor/bin/sail up
+./vendor/bin/sail up -> docker sistemimiz için gerekli kurulumları tamamlıyor, bu işlem bittikten eğer localde çalışıyorsak tarayıcı üzerinde http://localhost yazdığımızda projem aktif olacaktır.
 
 
