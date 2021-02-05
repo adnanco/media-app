@@ -30,7 +30,18 @@ Restful Apileri için Postman collection dosyası public klasörü altında yer 
 
 Bu kısımda yer alan opsiyonlardan olan RabbidMQ ile ip ve tarihi loglama kısmını yetiştiremedim.
 
----
+Proje bütün hali ile secondary branch'ında yer alıyor, son işlemler olarak onu dikkate alırsanız çok mutlu olurum :)
 
 ## Kurulum
+
+Projey'i geliştirmek için windows üzerinde Docker kurulumu yaptım. Eğer pc'nizde docker yüklü değilse aşağıda bulunan linkten indirebilirsiniz.
+
+[Docker Yükleme](https://www.docker.com/products/docker-desktop)
+
+Projeyi ayağa kaldırmak için terminal üzerinde ana dizinde aşağıda ki komutların çalıştırılması yeterli olacaktır
+
+composer install
+
+./vendor/bin/sail up
+
 
