@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -36,5 +36,7 @@
 </div>
 @include('sections.footer')
 <script src="{{asset('js')}}/app.js"></script>
+
+@yield('scripts')
 </body>
 </html>

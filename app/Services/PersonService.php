@@ -26,9 +26,9 @@ class PersonService
     public function getById($id)
     {
         $seconds = 60 * 5;
-       // return Cache::remember('person:' . $id, $seconds, function () use ($id) {
+        return Cache::remember('person:' . $id, $seconds, function () use ($id) {
             return $this->personRepository->getById($id);
-        //});
+        });
     }
 
     public function createPerson($data)
@@ -40,6 +40,7 @@ class PersonService
 
     public function updatePerson($data, $id)
     {
+        Cache::forget('person:' . $id);
         $seconds = 60 * 5;
         return Cache::remember('person:' . $id, $seconds, function () use ($data, $id) {
             return $this->personRepository->update($data, $id);

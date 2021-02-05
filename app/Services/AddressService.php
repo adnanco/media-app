@@ -32,6 +32,14 @@ class AddressService
         });
     }
 
+    public function getPerson($id)
+    {
+        $seconds = 60 * 5;
+        return Cache::remember('address:person:' . $id, $seconds, function () use ($id) {
+            return $this->addressRepository->getPerson($id);
+        });
+    }
+
     public function createAddress($data)
     {
         Cache::forget('address:list');
@@ -41,6 +49,8 @@ class AddressService
 
     public function updateAddress($data, $id)
     {
+        Cache::forget('address:' . $id);
+
         $seconds = 60 * 5;
         return Cache::remember('address:' . $id, $seconds, function () use ($data, $id) {
             return $this->addressRepository->update($data, $id);

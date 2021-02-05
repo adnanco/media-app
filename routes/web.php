@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\CountryCityController;
+use App\Http\Controllers\PersonApiController;
 use App\Http\Controllers\PersonController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,13 +19,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.index');
 });
 
-Route::resources([
-    'person' => PersonController::class,
-    'person.address' => AddressController::class,
-]);
+Route::resource('person', PersonController::class)->middleware(['auth']);
+Route::resource('person.address', AddressController::class)->middleware(['auth']);
 
-Route::get('/get-countries', [CountryCityController::class, 'getCountries']);
-Route::get('/get-country/{countryId}', [CountryCityController::class, 'getCountry']);
+
+Route::get('/get-countries', [CountryCityController::class, 'getCountries'])->middleware(['auth']);
+Route::get('/get-country/{countryId}', [CountryCityController::class, 'getCountry'])->middleware(['auth']);
+
+
+Route::get('/dashboard', [UserController::class, 'index'])->middleware(['auth'])->name('dashboard');
+
+require __DIR__ . '/auth.php';
+
+
