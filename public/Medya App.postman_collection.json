@@ -1,0 +1,589 @@
+{
+	"id": "2749ab78-77d1-9f4a-5e7a-8283f7e639e8",
+	"name": "Medya App",
+	"description": "",
+	"order": [
+		"ae7dbb94-daea-7aaf-3da0-0fadc72eb0ea",
+		"2b3d9ddb-22bf-55b0-8352-dd9fe8937245",
+		"968a860e-4b68-98a4-88f3-4f8200f7ddda",
+		"47d4b74f-1258-d32c-6307-9d786e56db42",
+		"f8b0bbb9-c503-a3d8-6601-85a10c51b8ae",
+		"246c8275-7911-1d94-5d90-deb6f6f33242",
+		"239f7785-7f75-d632-36db-c2fa876f9b93",
+		"7d201d24-1383-60a5-ded0-f6420e4a24df",
+		"97ad4d79-bc61-41e7-4c49-92bd374b9d55",
+		"f97c109d-8afe-6d29-72f1-790b349b593f",
+		"79b00abf-ef37-8236-c980-db35c7b2b8f1"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1612440141705,
+	"owner": "6609067",
+	"public": false,
+	"requests": [
+		{
+			"id": "239f7785-7f75-d632-36db-c2fa876f9b93",
+			"headers": "Accept: application/json\nAuthorization: Bearer {{token}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseURL}}/persons/{{personid}}/address",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1612477921855,
+			"name": "Person Adress Create",
+			"description": "",
+			"collectionId": "2749ab78-77d1-9f4a-5e7a-8283f7e639e8",
+			"responses": [],
+			"rawModeData": "{\r\n\t\"name\": \"İş Adresi\",\r\n\t\"address\": \"Uğur mumcu mahallesi\",\r\n\t\"postcode\": \"34844\",\r\n\t\"cityname\": \"1\",\r\n\t\"countryname\": \"1\"\r\n}"
+		},
+		{
+			"id": "246c8275-7911-1d94-5d90-deb6f6f33242",
+			"headers": "Accept: application/json\nAuthorization: Bearer {{token}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseURL}}/persons/{{personid}}",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1612477573224,
+			"name": "Person Delete",
+			"description": "",
+			"collectionId": "2749ab78-77d1-9f4a-5e7a-8283f7e639e8",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "2b3d9ddb-22bf-55b0-8352-dd9fe8937245",
+			"headers": "Accept: application/json\nAuthorization: Bearer {{token}}\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseURL}}/persons",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1612477282675,
+			"name": "Person List",
+			"description": "",
+			"collectionId": "2749ab78-77d1-9f4a-5e7a-8283f7e639e8",
+			"responses": []
+		},
+		{
+			"id": "47d4b74f-1258-d32c-6307-9d786e56db42",
+			"headers": "Accept: application/json\nAuthorization: Bearer {{token}}\nContent-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseURL}}/persons/{{personid}}",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [
+				{
+					"key": "name",
+					"value": "Adnan Günay",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "birthdate",
+					"value": "1991-07-11",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1612477578648,
+			"name": "Person",
+			"description": "",
+			"collectionId": "2749ab78-77d1-9f4a-5e7a-8283f7e639e8",
+			"responses": []
+		},
+		{
+			"id": "79b00abf-ef37-8236-c980-db35c7b2b8f1",
+			"headers": "Accept: application/json\nAuthorization: Bearer {{token}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseURL}}/persons/{{personid}}/address/{{addressid}}",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1612478666360,
+			"name": "Person Address Delete",
+			"description": "",
+			"collectionId": "2749ab78-77d1-9f4a-5e7a-8283f7e639e8",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "7d201d24-1383-60a5-ded0-f6420e4a24df",
+			"headers": "Accept: application/json\nAuthorization: Bearer {{token}}\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseURL}}/persons/{{personid}}/address",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1612477566528,
+			"name": "Person Adress List",
+			"description": "",
+			"collectionId": "2749ab78-77d1-9f4a-5e7a-8283f7e639e8",
+			"responses": []
+		},
+		{
+			"id": "968a860e-4b68-98a4-88f3-4f8200f7ddda",
+			"headers": "Accept: application/json\nAuthorization: Bearer {{token}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseURL}}/persons",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1612477391572,
+			"name": "Person Create",
+			"description": "",
+			"collectionId": "2749ab78-77d1-9f4a-5e7a-8283f7e639e8",
+			"responses": [],
+			"rawModeData": "{\r\n\t\"name\": \"Adnan Günay 2\",\r\n\t\"birthdate\": \"1991-07-11\",\r\n\t\"gender\": \"E\"\r\n}"
+		},
+		{
+			"id": "97ad4d79-bc61-41e7-4c49-92bd374b9d55",
+			"headers": "Accept: application/json\nAuthorization: Bearer {{token}}\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseURL}}/persons/{{personid}}/address/{{addressid}}",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1612478670969,
+			"name": "Person Adress ID",
+			"description": "",
+			"collectionId": "2749ab78-77d1-9f4a-5e7a-8283f7e639e8",
+			"responses": []
+		},
+		{
+			"id": "ae7dbb94-daea-7aaf-3da0-0fadc72eb0ea",
+			"headers": "Accept: application/json\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseURL}}/login",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "email",
+					"value": "adnnco@gmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "password",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1612477283313,
+			"name": "Login",
+			"description": "",
+			"collectionId": "2749ab78-77d1-9f4a-5e7a-8283f7e639e8",
+			"responses": []
+		},
+		{
+			"id": "f8b0bbb9-c503-a3d8-6601-85a10c51b8ae",
+			"headers": "Accept: application/json\nAuthorization: Bearer {{token}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseURL}}/persons/{{personid}}",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1612477575952,
+			"name": "Person Update",
+			"description": "",
+			"collectionId": "2749ab78-77d1-9f4a-5e7a-8283f7e639e8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK"
+					},
+					"time": 1899,
+					"headers": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Thu, 04 Feb 2021 22:21:55 GMT, Thu, 04 Feb 2021 22:21:55 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "host",
+							"key": "host",
+							"value": "localhost",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "PHP/8.0.1",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "59",
+							"description": "Custom header"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"status\":200,\"data\":{\"id\":1,\"name\":\"Adnan G\\u00fcnay\",\"birthdate\":\"1991-07-11\",\"gender\":\"E\",\"created_at\":\"2021-02-04T18:14:18.000000Z\",\"updated_at\":\"2021-02-04T22:20:32.000000Z\"}}",
+					"language": "json",
+					"rawDataType": "text",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"name": "Person Update",
+					"id": "7e8078ca-f63f-89e2-72e8-98188314ce15",
+					"request": {
+						"url": "{{baseURL}}/persons/1",
+						"pathVariables": {},
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"enabled": true,
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"enabled": true,
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": ""
+							}
+						],
+						"headers": "Accept: application/json\nAuthorization: Bearer {{token}}\nContent-Type: application/json\n",
+						"data": "{\r\n\t\"name\": \"Adnan Günay\",\r\n\t\"birthdate\": \"1991-07-11\",\r\n\t\"gender\": \"E\"\r\n}",
+						"method": "PUT",
+						"dataMode": "raw"
+					}
+				}
+			],
+			"rawModeData": "{\r\n\t\"name\": \"Adnan Günay\",\r\n\t\"birthdate\": \"1991-07-11\",\r\n\t\"gender\": \"E\"\r\n}"
+		},
+		{
+			"id": "f97c109d-8afe-6d29-72f1-790b349b593f",
+			"headers": "Accept: application/json\nAuthorization: Bearer {{token}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseURL}}/persons/{{personid}}/address/{{addressid}}",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1612478426945,
+			"name": "Person Address Update",
+			"description": "",
+			"collectionId": "2749ab78-77d1-9f4a-5e7a-8283f7e639e8",
+			"responses": [],
+			"rawModeData": "{\r\n\t\"name\": \"İş Adresi\",\r\n\t\"address\": \"Uğur mumcu mahallesi\",\r\n\t\"postcode\": \"34844\",\r\n\t\"cityname\": \"1\",\r\n\t\"countryname\": \"1\"\r\n}"
+		}
+	]
+}
