@@ -3,7 +3,7 @@
 Person ve Address tablolarıyla Laravel Repository Pattern kalıbına uygun web ve restfull api geliştirmesi yapmaya çalıştım. Seo'ya uygun olması adına başlıca kullanılan meta taglerini yerleştirdim.
 
 ### 1. Kısım
-Verilen ödev dökümanlarında her bir opsiyonu dikkatle inceleyerek projeme dahil etmeye çalıştım. Database işlemleri için Sqlite kurup tablo ilişkilerim için Eloquent (ORM) yapısı ile ilerledim. Sayfalara çok yük bindirmemek adına cache mekanizması olarak Redis'i kullandım. 
+Verilen ödev dökümanlarında her bir opsiyonu dikkatle inceleyerek projeme dahil etmeye çalıştım. Database işlemleri için Sqlite kurup tablo ilişkilerim için Eloquent (ORM) yapısı ile ilerledim. Sayfalara çok yük bindirmemek adına cache mekanizması olarak Redis'i kullandım.
 
 #### Projeye dahil kullanılan opsiyonlar
 
@@ -16,7 +16,7 @@ Verilen ödev dökümanlarında her bir opsiyonu dikkatle inceleyerek projeme da
 - Jquery
 - Scss
 
-Asetlerin küçültmesi ve birleştirmesi adına Laravel Mix 
+Asetlerin küçültmesi ve birleştirmesi adına Laravel Mix
 
 
 ### 2. Kısım
@@ -38,10 +38,10 @@ Projey'i geliştirmek için windows üzerinde Docker kurulumu yaptım. Eğer pc'
 
 [Docker Yükleme](https://www.docker.com/products/docker-desktop)
 
-Projeyi ayağa kaldırmak için terminal üzerinde ana dizinde aşağıda ki komutların çalıştırılması yeterli olacaktır
+Projeyi ayağa kaldırmak için terminal üzerinde ana dizinde aşağıda ki komutların çalıştırılması yeterli olacaktır.
 
 composer install
 
-./vendor/bin/sail up docker sistemimiz için gerekli kurulumları tamamlıyor, bu işlem bittikten sonra tarayıcı üzerinde http://localhost yazdığımızda projemizin ayaklanması gerekiyor.
+./vendor/bin/sail up -> docker sistemimiz için gerekli kurulumları tamamlıyor, bu işlem bittikten eğer localde çalışıyorsak tarayıcı üzerinde http://localhost yazdığımızda projem aktif olacaktır.
 
 

@@ -27,6 +27,7 @@
     <file url="file://$PROJECT_DIR$/app/Services/CountryService.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Services/PersonService.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Services/UserService.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/composer.json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config/app.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config/auth.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config/person.php" charset="UTF-8" />
